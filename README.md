@@ -22,20 +22,59 @@ Una página web educativa, interactiva y visualmente atractiva para aprender y c
 - Detalles expandibles para cada rol
 - Información esencial sobre eventos de Scrum
 - Búsqueda en la página (Ctrl+F)
-- Atajos de teclado (Alt+1 a Alt+5)
-- Botones de compartir en redes sociales
-- Modo oscuro (opcional)
+- Atajos de teclado (Alt+1 a Alt+6)
 - Impresión amigable (Ctrl+P)
 
-## 📁 Archivos
+## 📁 Estructura del Proyecto
 
 ```
 Scrum interactivo/
-├── index.html          # Estructura HTML de la página
-├── styles.css          # Estilos CSS y diseño responsivo
-├── script.js           # Interactividad y funcionalidades
-├── README.md           # Este archivo
-└── Proy2.3 Scrum.pdf   # Fuente de información (referencia)
+├── index.html                    # Entrada principal
+├── styles.css                    # Estilos globales y variables CSS
+├── package.json                  # Dependencias y scripts (para build con Vite)
+├── vite.config.js               # Configuración de Vite (build tool)
+│
+├── src/
+│   ├── js/
+│   │   └── main.js              # Script principal (carga componentes + interactividad)
+│   │
+│   └── components/              # Componentes tipo Angular (HTML + CSS + JS por carpeta)
+│       ├── navbar/
+│       │   ├── navbar.html
+│       │   ├── navbar.css
+│       │   └── navbar.js
+│       ├── inicio/
+│       │   ├── inicio.html
+│       │   ├── inicio.css
+│       │   └── inicio.js
+│       ├── que-es/
+│       │   ├── que-es.html
+│       │   ├── que-es.css
+│       │   └── que-es.js
+│       ├── roles/
+│       │   ├── roles.html
+│       │   ├── roles.css
+│       │   └── roles.js
+│       ├── eventos/
+│       │   ├── eventos.html
+│       │   ├── eventos.css
+│       │   └── eventos.js
+│       ├── presentacion/
+│       │   ├── presentacion.html
+│       │   ├── presentacion.css
+│       │   └── presentacion.js
+│       ├── caso-estudio/
+│       │   ├── caso-estudio.html
+│       │   ├── caso-estudio.css
+│       │   └── caso-estudio.js
+│       └── footer/
+│           ├── footer.html
+│           ├── footer.css
+│           └── footer.js
+│
+├── README.md                    # Este archivo
+├── Proy2.3 Scrum.pdf           # Fuente de información (referencia)
+└── GITHUB_SETUP.md             # Guía de configuración de GitHub
 ```
 
 ## 🚀 Uso
@@ -48,6 +87,79 @@ Scrum interactivo/
 ### Opción 2: Con un servidor local (recomendado)
 ```bash
 # Si tienes Python 3
+python -m http.server 8000
+
+# Si tienes Node.js + Vite instalado
+npm run dev
+```
+
+Luego abre `http://localhost:8000` o `http://localhost:5173`
+
+## ⌨️ Atajos de Teclado
+
+| Atajo | Acción |
+|-------|--------|
+| Alt + 1 | Ir a Inicio |
+| Alt + 2 | Ir a ¿Qué es Scrum? |
+| Alt + 3 | Ir a Roles |
+| Alt + 4 | Ir a Eventos |
+| Alt + 5 | Ir a Presentación |
+| Alt + 6 | Ir a Caso Real |
+| Ctrl + F | Buscar en la página |
+| Ctrl + P | Imprimir |
+
+## 🏗️ Arquitectura
+
+### Componentes tipo Angular
+Cada componente está en su propia carpeta con 3 archivos:
+- **HTML**: Estructura del componente
+- **CSS**: Estilos scoped (específicos del componente)
+- **JS**: Lógica e interactividad (exporta función `initComponentName()`)
+
+### Carga Dinámica
+El archivo `src/js/main.js`:
+1. Carga el HTML de cada componente con fetch
+2. Inyecta el contenido en los contenedores del DOM
+3. Inicializa la interactividad de cada componente
+4. Configura navegación, atajos de teclado y observadores
+
+## 📦 Dependencias
+
+- **Vite** (opcional): Build tool para desarrollo y producción
+- **Sass** (opcional): Para procesamiento de estilos
+
+Instalar: `npm install`
+
+## 🎨 Diseño
+
+### Paleta de Colores
+- **Primario**: #FF6B6B (Rojo)
+- **Secundario**: #4ECDC4 (Turquesa)
+- **Acento**: #95E1D3 (Menta)
+
+### Tipografía
+- Fuente: Segoe UI, Tahoma, Geneva, Verdana, sans-serif
+- Tamaño base: 1rem
+- Line-height: 1.6
+
+## 📱 Responsive Design
+
+- **Desktop**: 1200px max-width
+- **Tablet**: 768px breakpoint
+- **Mobile**: 480px breakpoint
+
+## 🤝 Contribuciones
+
+Para agregar mejoras:
+1. Fork el repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/mejora`)
+3. Commit tus cambios (`git commit -m 'Agregar mejora'`)
+4. Push a la rama (`git push origin feature/mejora`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Proyecto educativo. Libre para uso personal y académico.
 cd "D:\Programación\Proyectos\Scrum interactivo"
 python -m http.server 8000
 
