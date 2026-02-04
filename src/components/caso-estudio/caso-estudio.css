@@ -484,7 +484,7 @@
     }
 
     .case-tabs {
-        border-bottom: 1px solid #e0e0e0;
+        border-bottom: 1px solid var(--border-color);
     }
 
     .case-tab-btn {
@@ -507,7 +507,7 @@
     }
 
     .case-tab-btn {
-        border-bottom: 3px solid #e0e0e0;
+        border-bottom: 3px solid var(--border-color);
         margin-bottom: 0;
         text-align: left;
     }
