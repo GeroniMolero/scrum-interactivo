@@ -1,0 +1,33 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Carpetas de dependencias
+node_modules/
+.venv/
+venv/
+env/
+
+# Archivos de editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de compilación
+*.o
+*.pyc
+__pycache__/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Archivos temporales
+.temp/
+.cache/
