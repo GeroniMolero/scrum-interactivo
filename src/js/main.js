@@ -100,8 +100,6 @@ function initializeAllInteractivity() {
     
     // Navegación por teclado
     setupKeyboardNavigation();
-    
-    console.log('✓ Todos los componentes inicializados');
 }
 
 // ========== NAVEGACIÓN ========== 
@@ -138,7 +136,6 @@ function setupThemeToggle() {
     const toggle = document.getElementById('theme-toggle');
     if (!toggle) return;
     const srLabel = toggle.querySelector('.theme-toggle__sr');
-    const icon = toggle.querySelector('.theme-toggle__icon');
 
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const storedTheme = localStorage.getItem('theme');
@@ -150,9 +147,6 @@ function setupThemeToggle() {
         toggle.setAttribute('aria-pressed', theme === 'dark');
         toggle.setAttribute('title', theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
         toggle.dataset.theme = theme;
-        if (icon) {
-            icon.textContent = theme === 'dark' ? '🌙' : '☀️';
-        }
         if (srLabel) {
             srLabel.textContent = theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
         }
@@ -301,5 +295,4 @@ function setupKeyboardNavigation() {
 // ========== INICIAR APLICACIÓN ==========
 document.addEventListener('DOMContentLoaded', async () => {
     await ComponentLoader.init();
-    console.log('💡 Consejos: Usa ALT+1 a ALT+6 para navegar, Ctrl+F para buscar');
 });
