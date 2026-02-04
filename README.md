@@ -1,23 +1,23 @@
-# 🚀 Metodología Scrum - Guía Interactiva
+# Metodología Scrum - Guía Interactiva
 
 Una aplicación web educativa, moderna y visualmente atractiva para aprender la metodología Scrum de forma práctica e interactiva.
 
-## ✨ Características Principales
+## Características Principales
 
-### 🎨 Diseño Moderno
+### Diseño Moderno
 - Interfaz limpia y profesional con gradientes modernos
 - **Modo claro/oscuro** con toggle animado y efectos de brillo (sol/luna)
 - Animaciones suaves y transiciones fluidas
 - Totalmente responsive (móvil, tablet, escritorio)
 - Paleta de colores azul/verde con temas claro y oscuro
 
-### 🧩 Arquitectura Modular
+### Arquitectura Modular
 - Componentes independientes (estilo Angular/React)
 - Carga dinámica de componentes con fetch API
 - CSS scoped por componente
 - Código limpio y mantenible
 
-### 🎯 Contenido Educativo
+### Contenido Educativo
 - **Inicio**: Bienvenida con principios clave de Scrum
 - **¿Qué es Scrum?**: Conceptos fundamentales y pilares
 - **Roles**: Product Owner, Scrum Master, Equipo de Desarrollo
@@ -25,7 +25,7 @@ Una aplicación web educativa, moderna y visualmente atractiva para aprender la 
 - **Presentación**: Diapositivas embebidas de Canva
 - **Caso de Estudio Real**: Proyecto E-commerce completo con 4 sprints
 
-### ⌨️ Funcionalidades Interactivas
+### ⌨ Funcionalidades Interactivas
 - Navegación por secciones con enlaces activos
 - Detalles expandibles para cada rol
 - Tabs interactivos para eventos y caso de estudio
@@ -33,7 +33,7 @@ Una aplicación web educativa, moderna y visualmente atractiva para aprender la 
 - Animaciones al hacer scroll (Intersection Observer)
 - Persistencia del tema elegido (localStorage)
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 Scrum interactivo/
@@ -66,7 +66,7 @@ Scrum interactivo/
 └── Proy2.3 Scrum.pdf           # Documentación de referencia
 ```
 
-## 🚀 Cómo Usar
+## Cómo Usar
 
 ### Opción 1: Abrir Directamente
 1. Descarga o clona el proyecto
@@ -103,7 +103,7 @@ Luego abre `http://localhost:8000` o `http://localhost:5173`
 | `Alt + 5` | Ir a Presentación |
 | `Alt + 6` | Ir a Caso de Estudio |
 
-## 🎨 Sistema de Temas
+## Sistema de Temas
 
 ### Modo Claro
 - **Primario**: #1F4E79 (Azul profundo)
@@ -123,7 +123,7 @@ Luego abre `http://localhost:8000` o `http://localhost:5173`
 - Animaciones de transición suaves
 - Efectos de box-shadow para simular luz emitida
 
-## 🏗️ Arquitectura Técnica
+## Arquitectura Técnica
 
 ### Carga de Componentes
 ```javascript
@@ -145,13 +145,13 @@ ComponentLoader.init()
 - Clases `.active` en links y secciones
 - Scroll suave al cambiar sección
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 - **Desktop**: > 1024px (contenedor 1400px)
 - **Tablet**: 768px - 1024px
 - **Mobile**: < 768px
 
-## 🎓 Contenido Educativo
+## Contenido Educativo
 
 ### Roles en Scrum
 - **Product Owner**: Maximiza el valor del producto
@@ -170,7 +170,7 @@ ComponentLoader.init()
 - **Features**: Catálogo, Carrito, Pagos, Perfiles, Reseñas
 - **Resultados**: Métricas reales y lecciones aprendidas
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - **HTML5**: Estructura semántica
 - **CSS3**: Variables, Grid, Flexbox, Animations
@@ -178,7 +178,7 @@ ComponentLoader.init()
 - **Vite**: Build tool y dev server
 - **Git**: Control de versiones
 
-## 🔧 Scripts Disponibles
+## Scripts Disponibles
 
 ```bash
 npm run dev      # Servidor de desarrollo
@@ -186,17 +186,17 @@ npm run build    # Compilar para producción
 npm run preview  # Vista previa de build
 ```
 
-## 💡 Mejores Prácticas Implementadas
+## Mejores Prácticas Implementadas
 
-✅ **CSS Variables** para temas dinámicos  
-✅ **Componentes modulares** reutilizables  
-✅ **Carga asíncrona** para mejor performance  
-✅ **Accesibilidad** (atributos ARIA, SR-only text)  
-✅ **Código limpio** sin dependencias pesadas  
-✅ **Responsive** mobile-first design  
-✅ **Animaciones** suaves con Intersection Observer  
+ **CSS Variables** para temas dinámicos  
+ **Componentes modulares** reutilizables  
+ **Carga asíncrona** para mejor performance  
+ **Accesibilidad** (atributos ARIA, SR-only text)  
+ **Código limpio** sin dependencias pesadas  
+ **Responsive** mobile-first design  
+ **Animaciones** suaves con Intersection Observer  
 
-## 🤝 Contribuir
+## Contribuir
 
 1. Fork el repositorio
 2. Crea una rama: `git checkout -b feature/nueva-funcionalidad`
@@ -204,29 +204,26 @@ npm run preview  # Vista previa de build
 4. Push: `git push origin feature/nueva-funcionalidad`
 5. Abre un Pull Request
 
-## 📝 Notas
+## Notas
 
 - **Sin dependencias en runtime**: Solo JavaScript vanilla
 - **Funciona offline**: Una vez cargado, no requiere internet
 - **Ligero**: < 500KB total (sin contar PDF)
 - **Compatible**: Todos los navegadores modernos
 
-## 📚 Referencias
+## Referencias
 
 - [Scrum Guide](https://scrumguides.org/) - Guía oficial
 - [Scrum.org](https://www.scrum.org/) - Recursos y certificaciones
 - Archivo incluido: `Proy2.3 Scrum.pdf`
 
-## 📄 Licencia
+## Licencia
 
 Proyecto educativo libre para uso personal y académico.
 
+## Autor
+
+**Gerónimo Molero**  
+[Tu Email](gemordz@gmail.com) | [GitHub](https://github.com/GeroniMolero)
+
 ---
-
-**Hecho con ❤️ para aprender Scrum de forma interactiva**
-
-🌟 ¿Te gusta el proyecto? ¡Dale una estrella en GitHub!
-
-**Hecho con ❤️ para aprender Scrum de forma interactiva**
-
-🌟 ¿Te gusta el proyecto? ¡Dale una estrella en GitHub!
