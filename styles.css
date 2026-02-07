@@ -24,6 +24,7 @@
     --border-color: #E5E7EB;
     --success-color: #27AE60;
     --warning-color: #F39C12;
+    --buscar-reproductor: white;
     --fondo-reproductor: url(../../public/images/fondoreproductorclaro.jpg);
 }
 
@@ -45,6 +46,7 @@ body.theme-dark {
     --accent-tint: rgba(62, 74, 92, 0.15);
     --border-color: #333333;
     --fondo-reproductor: url(../../public/images/fondoreproductoroscuro.jpg);
+    --buscar-reproductor: #9CA3AF;
 }
 
 body.theme-dark h2,
