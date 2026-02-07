@@ -12,43 +12,40 @@ src/
 └── components/              # Componentes modulares (carpeta por componente)
     ├── navbar/              # Navegación
     │   ├── navbar.html      # Estructura
-    │   ├── navbar.css       # Estilos
-    │   └── navbar.js        # Lógica (export initNavbar())
+    │   └── navbar.css       # Estilos
     │
     ├── inicio/              # Sección de bienvenida
     │   ├── inicio.html
-    │   ├── inicio.css
-    │   └── inicio.js
+    │   └── inicio.css
     │
     ├── que-es/              # Definición de Scrum
     │   ├── que-es.html
-    │   ├── que-es.css
-    │   └── que-es.js
+    │   └── que-es.css
     │
     ├── roles/               # Roles de Scrum
     │   ├── roles.html
-    │   ├── roles.css
-    │   └── roles.js
+    │   └── roles.css
     │
     ├── eventos/             # Eventos de Scrum (tabs)
     │   ├── eventos.html
-    │   ├── eventos.css
-    │   └── eventos.js
+    │   └── eventos.css
     │
     ├── presentacion/        # Canva embedded
     │   ├── presentacion.html
-    │   ├── presentacion.css
-    │   └── presentacion.js
+    │   └── presentacion.css
     │
-    ├── caso-estudio/        # Ejemplo real (4 tabs)
+    ├── caso-estudio/        # Ejemplo (4 tabs)
     │   ├── caso-estudio.html
-    │   ├── caso-estudio.css
-    │   └── caso-estudio.js
+    │   └── caso-estudio.css
     │
     └── footer/              # Pie de página
         ├── footer.html
-        ├── footer.css
-        └── footer.js
+        └── footer.css
+
+    └── music-player/        # Reproductor de musica
+        ├── music-player.html
+        ├── music-player.css
+        └── music-player.js
 ```
 
 ## 🎯 Componentes Disponibles
@@ -61,7 +58,7 @@ src/
 | **inicio** | Hero con 4 tarjetas de principios | Animaciones al scroll |
 | **que-es** | Definición de Scrum y 3 pilares | Estático con animaciones |
 | **roles** | 3 roles con detalles expandibles | Click botones "Ver Detalles" |
-| **eventos** | 4 eventos con tabs interactivos | Click en tabs, arrow keys |
+| **eventos** | 4 eventos con tabs interactivos | Click en tabs |
 | **presentacion** | Canva iframe responsive | Responsive (altura dinámica) |
 | **caso-estudio** | Ejemplo real con 4 tabs | Click tabs (Equipo, Backlog, Sprints, Resultados) |
 | **footer** | Pie de página | Estático |
@@ -91,13 +88,17 @@ Cada componente sigue el mismo patrón:
 }
 ```
 
-### JavaScript (`componente/componente.js`)
+### JavaScript (`src/js/main.js`)
 ```javascript
-export function initComponente() {
-    // Lógica e interactividad del componente
-    document.querySelectorAll('.selector').forEach(el => {
-        el.addEventListener('event', handler);
-    });
+function initializeAllInteractivity() {
+    setupNavigation();
+    setupThemeToggle();
+    initializeRoleDetails();
+    initializeEventTabs();
+    initializeCaseTabs();
+    setupIntersectionObserver();
+    setupKeyboardNavigation();
+    setupMusicSidebar();
 }
 ```
 
@@ -143,12 +144,8 @@ touch src/components/mi-componente/mi-componente.{html,css,js}
 /* Estilos del componente */
 ```
 
-### 4. Lógica (`mi-componente.js`)
-```javascript
-export function initMiComponente() {
-    // Interactividad
-}
-```
+### 4. Lógica
+Agrega los selectores y listeners en `initializeAllInteractivity()` dentro de `src/js/main.js`.
 
 ### 5. Registrar en `main.js`
 En la sección de `ComponentLoader.init()`, agregar:
@@ -246,16 +243,16 @@ Cada componente importa sus propios estilos en `index.html`.
    <li><a href="#mi-componente" class="nav-link" data-section="mi-componente">Mi Componente</a></li>
    ```
 
-## Archivo Principal: index-components.html
+## Archivo Principal: index.html
 
-Este es el archivo HTML principal que carga todos los componentes dinámicamente. Los componentes se cargan mediante fetch y se inyectan en el DOM.
+El archivo HTML principal carga los componentes dinámicamente y añade los estilos por componente.
 
 ```html
 <!-- Contenedor donde se inyectan los componentes -->
 <div id="component-container"></div>
 
 <!-- Scripts que cargan todo -->
-<script src="src/js/component-loader.js"></script>
+<script src="src/components/music-player/music-player.js"></script>
 <script src="src/js/main.js"></script>
 ```
 

@@ -8,13 +8,13 @@ Una aplicación web educativa, moderna y visualmente atractiva para aprender la 
 - Interfaz limpia y profesional con gradientes modernos
 - **Modo claro/oscuro** con toggle animado y efectos de brillo (sol/luna)
 - Animaciones suaves y transiciones fluidas
-- Totalmente responsive (móvil, tablet, escritorio)
+- Responsive con ajustes para tablet y móvil
 - Paleta de colores azul/verde con temas claro y oscuro
 
 ### Arquitectura Modular
 - Componentes independientes (estilo Angular/React)
 - Carga dinámica de componentes con fetch API
-- CSS scoped por componente
+- CSS organizado por componente (convención, sin scoping real)
 - Código limpio y mantenible
 
 ### Contenido Educativo
@@ -24,6 +24,7 @@ Una aplicación web educativa, moderna y visualmente atractiva para aprender la 
 - **Eventos**: Sprint Planning, Daily Standup, Review, Retrospectiva
 - **Presentación**: Diapositivas embebidas de Canva
 - **Caso de Estudio Real**: Proyecto E-commerce completo con 4 sprints
+- **Caso de Estudio**: Proyecto E-commerce con 4 sprints
 
 ### ⌨ Funcionalidades Interactivas
 - Navegación por secciones con enlaces activos
@@ -73,7 +74,7 @@ Scrum interactivo/
 ### Opción 1: Abrir Directamente
 1. Descarga o clona el proyecto
 2. Abre `index.html` en tu navegador
-3. ¡Listo para explorar!
+3. Nota: algunos navegadores bloquean `fetch` en `file://`; si algo no carga, usa un servidor local
 
 ### Opción 2: Servidor Local (Recomendado)
 ```bash
@@ -149,9 +150,9 @@ ComponentLoader.init()
 
 ## Responsive Breakpoints
 
-- **Desktop**: > 1024px (contenedor 1400px)
-- **Tablet**: 768px - 1024px
-- **Mobile**: < 768px
+- **Tablet**: hasta 768px
+- **Mobile**: hasta 480px
+- **Desktop**: por defecto (contenedor 1400px)
 
 ## Contenido Educativo
 
@@ -161,16 +162,16 @@ ComponentLoader.init()
 - **Equipo de Desarrollo**: Construye el incremento del producto
 
 ### Eventos de Scrum
-- **Sprint Planning**: Planificación del sprint (máx 8h)
+- **Sprint Planning**: Planificación del sprint (4h)
 - **Daily Standup**: Sincronización diaria (15 min)
-- **Sprint Review**: Demo del trabajo completado (máx 4h)
-- **Sprint Retrospective**: Reflexión y mejora continua (máx 3h)
+- **Sprint Review**: Demo del trabajo completado (2h)
+- **Sprint Retrospective**: Reflexión y mejora continua (1.5h)
 
 ### Caso de Estudio: E-commerce
 - **Duración**: 4 sprints de 2 semanas
-- **Equipo**: 7 personas (PO, SM, 4 Dev, 1 QA, 1 Designer)
-- **Features**: Catálogo, Carrito, Pagos, Perfiles, Reseñas
-- **Resultados**: Métricas reales y lecciones aprendidas
+- **Equipo**: 6 personas (PO, SM, 2 Dev, 1 QA, 1 Designer)
+- **Features**: Catálogo, Carrito, Pagos, Perfiles, Reseñas, Wishlist
+- **Resultados**: Métricas y lecciones aprendidas (caso ilustrativo)
 
 ## Tecnologías
 
@@ -194,7 +195,7 @@ npm run music:sync # Actualiza la lista de musica local del proyecto
  **CSS Variables** para temas dinámicos  
  **Componentes modulares** reutilizables  
  **Carga asíncrona** para mejor performance  
- **Accesibilidad** (atributos ARIA, SR-only text)  
+ **Accesibilidad** básica (atributos ARIA y SR-only en controles clave)  
  **Código limpio** sin dependencias pesadas  
  **Responsive** mobile-first design  
  **Animaciones** suaves con Intersection Observer  
@@ -210,9 +211,9 @@ npm run music:sync # Actualiza la lista de musica local del proyecto
 ## Notas
 
 - **Sin dependencias en runtime**: Solo JavaScript vanilla
-- **Funciona offline**: Una vez cargado, no requiere internet
-- **Ligero**: < 500KB total (sin contar PDF)
-- **Compatible**: Todos los navegadores modernos
+- **Requiere internet** para la presentación embebida de Canva
+- **Peso**: depende de imágenes y música locales
+- **Compatible**: navegadores modernos (sin pruebas formales)
 
 ## Referencias
 
